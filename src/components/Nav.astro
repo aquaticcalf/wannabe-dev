@@ -1,15 +1,36 @@
 ---
 
 ---
-<div class="p-5 flex justify-center items-center fixed w-full">
-    <div class="bg-white p-5 py-2 max-w-[1200px] w-full rounded-xl border-2 border-black flex justify-center items-center">
-        <div>logo</div>
+<div class="p-5 flex justify-center items-center sticky top-0 z-50 w-full">
+    <div class="bg-white p-5 py-2 max-w-[1200px] w-full rounded-xl border-2 border-black flex justify-center items-center relative">
+        <div>wannabe dev</div>
         <div class="grow hidden md:block"></div>
+        
         <div class="gap-4 hidden md:flex">
             <a href="/" class="bg-green-300 py-2 px-6 rounded-lg border-2 border-black border-b-4 hover:border-b-2">Home</a>
-            <a href="about" class="bg-red-300 py-2 px-6 rounded-lg border-2 border-black border-b-4 hover:border-b-2">About</a>
-            <a href="contact" class="bg-orange-300 py-2 px-6 rounded-lg border-2 border-black border-b-4 hover:border-b-2">Contact</a>
-            <a href="faq" class="bg-blue-300 py-2 px-6 rounded-lg border-2 border-black border-b-4 hover:border-b-2">FAQ</a>
+            <a href="/about" class="bg-red-300 py-2 px-6 rounded-lg border-2 border-black border-b-4 hover:border-b-2">About</a>
+            <a href="/contact" class="bg-orange-300 py-2 px-6 rounded-lg border-2 border-black border-b-4 hover:border-b-2">Contact</a>
+            <a href="/faq" class="bg-blue-300 py-2 px-6 rounded-lg border-2 border-black border-b-4 hover:border-b-2">FAQ</a>
+        </div>
+        
+        <input type="checkbox" id="mobile-menu-toggle" class="hidden peer/menu" />
+        <label for="mobile-menu-toggle" class="md:hidden absolute right-5 top-1/2 transform -translate-y-1/2 w-6 h-3 cursor-pointer">
+            <span class="absolute w-full h-0.5 bg-black top-0 transition-all duration-300 peer-checked/menu:rotate-45 peer-checked/menu:translate-y-1.5"></span>
+            <span class="absolute w-full h-0.5 bg-black bottom-0 transition-all duration-300 peer-checked/menu:-rotate-45 peer-checked/menu:-translate-y-1.5"></span>
+        </label>
+        
+        <div class="fixed inset-0 bg-white z-50 hidden peer-checked/menu:flex md:hidden items-center justify-center">
+            <div class="relative flex flex-col items-center justify-center h-full w-full space-y-6 p-6">
+                <label for="mobile-menu-toggle" class="absolute top-6 right-6 w-10 h-10 cursor-pointer group">
+                    <span class="absolute top-1/2 left-0 w-full h-0.5 bg-black rotate-45 transform translate-y-0 group-hover:bg-red-500 transition-colors"></span>
+                    <span class="absolute top-1/2 left-0 w-full h-0.5 bg-black -rotate-45 transform translate-y-0 group-hover:bg-red-500 transition-colors"></span>
+                </label>
+
+                <a href="/" class="bg-green-300 py-4 px-8 text-xl rounded-lg border-2 border-black border-b-4 hover:border-b-2 w-full text-center">Home</a>
+                <a href="/about" class="bg-red-300 py-4 px-8 text-xl rounded-lg border-2 border-black border-b-4 hover:border-b-2 w-full text-center">About</a>
+                <a href="/contact" class="bg-orange-300 py-4 px-8 text-xl rounded-lg border-2 border-black border-b-4 hover:border-b-2 w-full text-center">Contact</a>
+                <a href="/faq" class="bg-blue-300 py-4 px-8 text-xl rounded-lg border-2 border-black border-b-4 hover:border-b-2 w-full text-center">FAQ</a>
+            </div>
         </div>
     </div>
 </div>
