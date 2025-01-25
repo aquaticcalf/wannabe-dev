@@ -1,7 +1,8 @@
 ---
 import Nav from '../components/Nav.astro'
-const { color } = Astro.props
-const bgclass = color ? `bg-${color}-400 min-h-[300vh]` : 'bg-gray-400 min-h-screen'
+const { frontmatter } = Astro.props
+const color = frontmatter ? frontmatter.color : Astro.props.color
+const bgclass = color ? `bg-${color}-400 min-h-screen max-w-[1400px] m-auto` : 'bg-gray-400 min-h-screen max-w-[1400px] m-auto'
 ---
 <!doctype html>
 <html lang="en">
